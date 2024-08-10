@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "fcdd606d-472c-4a06-a6bc-6c3c99fcf19e",
+		"name": "BetaCrew",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20443692"
+	},
+	"item": [
+		{
+			"name": "stream-all-packets",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": "http://localhost:3001/betaCrewClient/stream-all-packets"
+			},
+			"response": [
+				{
+					"name": "response-stream-all-packets",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": "http://localhost:3001/betaCrewClient/stream-all-packets"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "399"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"18f-RiYQq5Bj7zk+jNt+irnIAdCqVYA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Aug 2024 18:39:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"symbol\": \"AAPL\",\n        \"buySellIndicator\": \"B\",\n        \"quantity\": 50,\n        \"price\": 100,\n        \"sequence\": 1\n    },\n    {\n        \"symbol\": \"AAPL\",\n        \"buySellIndicator\": \"B\",\n        \"quantity\": 30,\n        \"price\": 98,\n        \"sequence\": 2\n    },\n    {\n        \"symbol\": \"AAPL\",\n        \"buySellIndicator\": \"S\",\n        \"quantity\": 20,\n        \"price\": 101,\n        \"sequence\": 3\n    },\n    {\n        \"symbol\": \"AAPL\",\n        \"buySellIndicator\": \"S\",\n        \"quantity\": 10,\n        \"price\": 102,\n        \"sequence\": 4\n    },\n    {\n        \"symbol\": \"META\",\n        \"buySellIndicator\": \"B\",\n        \"quantity\": 40,\n        \"price\": 50,\n        \"sequence\": 5\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "resend-packet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/betaCrewClient/resend-packet?sequence=13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"betaCrewClient",
+						"resend-packet"
+					],
+					"query": [
+						{
+							"key": "sequence",
+							"value": "13"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response-resend-packet",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/betaCrewClient/resend-packet?sequence=13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"betaCrewClient",
+								"resend-packet"
+							],
+							"query": [
+								{
+									"key": "sequence",
+									"value": "13"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "81"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"51-ikW2ZE3CdA+CEzDkt2wFDptTqs4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Aug 2024 16:15:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"symbol\": \"AMZN\",\n    \"buySellIndicator\": \"S\",\n    \"quantity\": 15,\n    \"price\": 3020,\n    \"sequence\": 13\n}"
+				}
+			]
+		}
+	]
+}
